@@ -2,16 +2,16 @@ package comp208.dobrae.week5draw;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.View.OnTouchListener; // need this for the View
 
 public class MainActivity extends AppCompatActivity {
 
     // add in drawer obj
     Drawer lines;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +42,44 @@ public class MainActivity extends AppCompatActivity {
         };
 
         lines.setOnTouchListener(listener);
+    }
+
+    // clear drawing screen
+    public void clearScreen(View view) {
+        lines.clearScreen();
+    }
+
+    // Color change functions
+    public void red(View view) {
+        lines.changeColorRed();
+    }
+
+    public void magenta(View view) {
+        lines.changeColorMagenta();
+    }
+
+    public void green(View view) {
+        lines.changeColorGreen();
+    }
+
+    public void blue(View view) {
+        lines.changeColorBlue();
+    }
+
+    public void yellow(View view) {
+        lines.changeColorYellow();
+    }
+
+    // stroke width change functions
+    public void pencil(View view) {
+        lines.pencilStroke();
+    }
+
+    public void highlighter(View view) {
+        lines.highlighterStroke();
+    }
+
+    public void brush(View view) {
+        lines.brushStroke();
     }
 }
